@@ -150,11 +150,6 @@ a:focus {
     backdrop-filter: blur(7px);
 }
 
-#offcanvasNavbar .nav-item{
-    color: white;
-    font-size: 18px;
-    font-weight: 400;
-}
 
 @media (min-width: 992px) {
     .navbar {
@@ -222,6 +217,12 @@ a:focus {
     
     .navbar .dropdown-menu {
         box-shadow: none;
+    }
+
+    #offcanvasNavbar .nav-item{
+        color: white;
+        font-size: 18px;
+        font-weight: 400;
     }
 }
 
@@ -1385,6 +1386,7 @@ a:focus {
     padding-top: 90px;
     background: rgba(0, 0, 0, .04);
 }
+
 
 .footer .footer-contact,
 .footer .footer-link,
