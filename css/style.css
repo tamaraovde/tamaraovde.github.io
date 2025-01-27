@@ -155,11 +155,6 @@ a:focus {
     background: #f8f9fa;
 }
 
-#offcanvasNavbar{
-    background-color: rgba(224, 224, 224, 0.305);
-    backdrop-filter: blur(7px);
-}
-
 
 @media (min-width: 992px) {
     .navbar {
@@ -233,6 +228,11 @@ a:focus {
         color: white;
         font-size: 18px;
         font-weight: 400;
+    }
+
+    #offcanvasNavbar{
+        background-color: rgba(224, 224, 224, 0.305);
+        backdrop-filter: blur(7px);
     }
 }
 
