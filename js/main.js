@@ -23,7 +23,20 @@
             $('.navbar').removeClass('nav-sticky');
         }
     });
-    
+
+    // Main carousel
+    $(".carousel .owl-carousel").owlCarousel({
+        autoplay: true,
+        animateOut: 'fadeOut',
+        animateIn: 'fadeIn',
+        items: 1,
+        smartSpeed: 300,
+        dots: false,
+        loop: true,
+        nav : false
+    });
+
+
     // Testimonials carousel
     $(".testimonials-carousel").owlCarousel({
         center: true,
@@ -45,7 +58,6 @@
             }
         }
     });
-    
     
     // Related post carousel
     $(".related-slider").owlCarousel({
@@ -71,6 +83,29 @@
     });
     
 })(jQuery);
+
+        document.addEventListener("DOMContentLoaded", () => {
+            const navLinks = document.querySelectorAll(".menu-tab .nav-link");
+            const tabPanes = document.querySelectorAll(".tab-content .tab-pane");
+
+            navLinks.forEach(link => {
+                link.addEventListener("click", (e) => {
+                    e.preventDefault();
+
+                    // Remove active class from all links and sections
+                    navLinks.forEach(nav => nav.classList.remove("active"));
+                    tabPanes.forEach(pane => pane.classList.remove("active", "show"));
+
+                    // Add active class to clicked link and corresponding section
+                    link.classList.add("active");
+                    const targetId = link.getAttribute("href").substring(1);
+                    const targetPane = document.getElementById(targetId);
+                    if (targetPane) {
+                        targetPane.classList.add("active", "show");
+                    }
+                });
+            });
+        });
 
 AOS.init();
 AOS.init({
