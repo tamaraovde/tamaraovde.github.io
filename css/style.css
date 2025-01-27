@@ -898,6 +898,13 @@ a:focus {
 @media (max-width: 575.98px) {
     .title-caption {
       padding: 20px 20px;  
+      color:  #757575;
+    }
+    .color-white {
+        color: black;
+    }
+    .special-menu{
+        background: #fff;
     }
 }
 
